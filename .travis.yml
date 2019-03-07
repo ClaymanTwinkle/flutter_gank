@@ -41,7 +41,6 @@ matrix:
       - platform-tools
       - build-tools-27.0.3
       - android-27
-      - extra
       - sys-img-armeabi-v7a-google_apis-25
       - extra-android-m2repository
       - extra-google-m2repository
@@ -57,9 +56,9 @@ matrix:
         - libstdc++6
         - fonts-droid
     before_script:
-    - wget https://services.gradle.org/distributions/gradle-4.10.2-all.zip
-    - unzip -qq gradle-4.10.2-all.zip
-    - export GRADLE_HOME=$PWD/gradle-4.10.2
+    - wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
+    - unzip -qq gradle-3.5-bin.zip
+    - export GRADLE_HOME=$PWD/gradle-3.5
     - export PATH=$GRADLE_HOME/bin:$PATH
     - git clone https://github.com/flutter/flutter.git -b beta --depth 1
     script:
