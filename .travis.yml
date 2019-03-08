@@ -30,7 +30,7 @@ android:
   - tools
   - platform-tools
   - build-tools-28.0.3
-  - android-28
+  - android-27
   - extra-android-support
   - extra-google-google_play_services
   - extra-android-m2repository
