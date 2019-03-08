@@ -1,19 +1,38 @@
+sudo: required
+language: dart
+language: android
 os:
 - linux
-sudo: false
-addons:
-  apt:
-    # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
-    sources:
-    - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
-    packages:
-    - libstdc++6
-    - fonts-droid
-before_script:
-- git clone https://github.com/flutter/flutter.git -b beta
-- ./flutter/bin/flutter doctor
+jdk:
+-  oraclejdk8
+#
+
 script:
-- ./flutter/bin/flutter build apk
-cache:
-  directories:
-  - $HOME/.pub-cache
+- flutter build aot
+- flutter build apk
+- flutter build flx
+#
+
+before_install:
+- git clone -b alpha https://github.com/flutter/flutter.git
+- wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
+- unzip gradle-3.5-bin.zip
+#
+
+install:
+- export GRADLE_HOME=$PWD/gradle-3.5
+- export PATH=$GRADLE_HOME/bin:$PATH
+- export PATH=./flutter/bin:$PATH
+#
+
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-25.0.3
+  - android-25
+  - extra-android-support
+  - extra-google-google_play_services
+  - extra-android-m2repository
+  - extra-google-m2repository
+  - addon-google_apis-google-21
