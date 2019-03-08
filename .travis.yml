@@ -14,7 +14,7 @@ script:
 #
 
 before_install:
-- git clone -b alpha https://github.com/flutter/flutter.git
+- git clone https://github.com/flutter/flutter.git
 - wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
 - unzip gradle-3.5-bin.zip
 #
