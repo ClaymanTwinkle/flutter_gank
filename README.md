@@ -1,5 +1,8 @@
 # flutter_gank
 
+[![Build Status](https://travis-ci.org/ClaymanTwinkle/flutter_gank.svg?branch=master)](https://travis-ci.org/ClaymanTwinkle/flutter_gank)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 A new Flutter application for gank.io
 
 ## Getting Started
