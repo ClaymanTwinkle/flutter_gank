@@ -15,12 +15,12 @@ script:
 
 before_install:
 - git clone https://github.com/flutter/flutter.git
-- wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
-- unzip gradle-3.5-bin.zip
+- wget https://services.gradle.org/distributions/gradle-4.10.2-all.zip
+- unzip gradle-4.10.2-all.zip
 #
 
 install:
-- export GRADLE_HOME=$PWD/gradle-3.5
+- export GRADLE_HOME=$PWD/gradle-4.10.2
 - export PATH=$GRADLE_HOME/bin:$PATH
 - export PATH=./flutter/bin:$PATH
 #
@@ -29,8 +29,8 @@ android:
   components:
   - tools
   - platform-tools
-  - build-tools-25.0.3
-  - android-25
+  - build-tools-27.0.3
+  - android-27
   - extra-android-support
   - extra-google-google_play_services
   - extra-android-m2repository
